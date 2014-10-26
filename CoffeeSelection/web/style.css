@@ -1,0 +1,120 @@
+/* 
+    Created on : Oct 19, 2014, 8:19:35 AM
+    Author     : Konstantinos Themelis
+*/
+.activetext
+{
+        background-color:#242424;
+}
+
+h1{
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 150%;
+}
+body
+{
+        text-shadow: 2px 2px 4px #000000;
+	border-radius:10px;
+	//border:5px solid #ff9900;
+        font-family:"Times New Roman";
+        font-size: 120%;
+        color:#FF8330;
+	background-color:#000000;
+        background-image: url('coffee.jpg');
+	margin-top:40px;
+	margin-bottom:40px;
+	margin-right:10%;
+	margin-left:10%;
+	padding-top:25px;
+	padding-bottom:25px;
+	padding-right:50px;
+	padding-left:50px;
+}
+
+hr
+{
+        color:#242424;
+}
+
+a:link		{color:#88b8f6;font-weight:bold}
+a:visited	{color:#95e454}
+a:hover		{color:#e5786d;background-color:#000000;border-radius:10px;}
+a:active	{color:#88b8f6}
+
+input#submitType {
+padding: 4px 20px;
+/*give the background a gradient*/
+background:#ffae00; /*fallback for browsers that don't support gradients*/
+background: -webkit-linear-gradient(top, #CC9900,#FFCC00);
+background: -moz-linear-gradient(top, #CC9900, #FFCC00);
+background: -o-linear-gradient(top, #CC9900, #FFCC00);
+background: linear-gradient(top, #CC9900, #FFCC00);
+border:2px outset #dad9d8;
+/*style the text*/
+font-family:Andika, Arial, sans-serif;
+font-size:1.1em;
+letter-spacing:0.05em;
+text-transform:uppercase;
+color:#FFF;
+text-shadow: 0px 1px 10px #000;
+/*add to small curve to the corners of the button*/
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+/*give the button a drop shadow*/
+-webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+-moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+}
+/****NOW STYLE THE BUTTON'S HOVER STATE***/
+input#submitType:hover, input#submitType :focus {
+border:2px solid #dad9d8;
+}
+
+.mylist {
+ list-style-type: square;
+ list-style-position: outside;
+ list-style-image: none;
+}
+
+/**FIRST CREATE THE BOX**/
+#sticky{
+position: relative; /*for more info on positioning see the Support section below*/
+width: 300px;
+background: #832436;
+/*give the box a drop shadow*/
+-webkit-box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .75);
+-moz-box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .75);
+box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .75);
+}
+/**NOW WE CREATE THE TAPE**/
+/*First the basic styling of both strips*/
+#tape::before, #tape::after{
+content: ''; /*because there is nothing between the ' ' the content of the pseudo elements will be blank*/
+display: block;
+position: absolute; /*for more info on positioning see the Support section below*/
+background-color: rgba(220,212,176,0.85); /*using rgba for the colour lets us give the tape some opacity*/
+height: 25px;
+}
+/*Now position the left strip of tape*/
+#tape::before{
+left:-5px; /*distance from the left edge of the box*/
+top: -15px; /*distance from the top of the box*/
+width: 45px; /*length of the strip of tape*/
+/*rotate the tape, in this case 12° anti-clockwise*/
+-webkit-transform: rotate(-12deg);
+-moz-transform: rotate(-12deg);
+-o-transform: rotate(-12deg);
+-ms-transform: rotate(-12deg);
+}
+/*Finally position the right strip*/
+#tape::after {
+left: 298px; /*distance from the left edge of the box*/
+top: -10px; /*distance from the top of the box*/
+width: 70px; /*length of the strip of tape*/
+/*rotate the tape, this time 20° clockwise*/
+-webkit-transform: rotate(20deg);
+-moz-transform: rotate(20deg);
+-o-transform: rotate(20deg);
+-ms-transform: rotate(20deg);
+}
